@@ -12,17 +12,17 @@
     msg5 db "2nd Iput was:$"
     msg6 db "3rd Iput was:$" 
 .code 
-   mov ax, @data 
+   mov ax, @data ;Massage Print
    mov ds, ax
    mov ah , 9
    lea dx , msg 
    int 21h  
     
-   mov ah,1 
+   mov ah,1   ;User Input
    int 21h
    mov a,al
     
-   mov ah ,2 
+   mov ah ,2          ;New Line 
    mov dl, 0ah
    int 21h
    mov dl, 0dh
@@ -68,7 +68,7 @@
    lea dx , msg4 
    int 21h  
     
-   mov ah,2 
+   mov ah,2        ; Output Print
    mov dl,a
    int 21h
     
